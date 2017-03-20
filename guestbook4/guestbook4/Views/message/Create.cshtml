@@ -1,0 +1,20 @@
+﻿@model IEnumerable<guestbook4.Models.Table>
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>新增留言</h2>
+@using (Html.BeginForm("Create", "Message"))
+{
+    <div>
+        @Html.Label("昵称")
+        @Html.TextBox("strTitle")
+        <br />
+
+        @Html.Label("內容")
+        @Html.TextBox("strContent")
+        <br />
+        <input type="submit" value="留言" />
+    </div>
+
+}

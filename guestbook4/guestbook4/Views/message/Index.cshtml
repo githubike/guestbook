@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@model IEnumerable<guestbook4.Models.Table>
+
+@{
+    ViewBag.Title = "留言板";
+}
+<div>
+
+    <h2>留言列表</h2>
+
+    @if (Model != null)
+    {
+        <table>
+            <tbody>
+                @foreach (var item in Model)
+                {
+
+                    <tr>
+                        <td>留言內容：@item.Content</td>
+                    </tr>
+                    <tr>
+                        <td>@item.Title 发表于 @item.Time @*<a href="message/delete?id=@item.Id">删除</a>*@<br />　</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+</div>
+<br />
+<div>
+    @Html.ActionLink("点击留言", "Create");
+</div>
