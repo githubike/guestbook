@@ -17,7 +17,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("留言板", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -30,7 +30,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year <br/>ike. 留言板<br/>v1.0 留言功能完成<br/>v1.1 留言倒序显示</p>
+            <p>&copy; @DateTime.Now.Year <br/>ike. 留言板<br/>v1.0 留言功能完成<br/>v1.1 留言倒序显示<br />v1.2 留言为空检测</p>
         </footer>
     </div>
 

@@ -42,9 +42,13 @@ namespace guestbook4.Controllers
         [HttpPost]
         public ActionResult Create(string strTitle, string strContent)
         {
-            //調用Service中的Create方法,把數據寫到數據庫中
+            if(strTitle.Length==0||strContent.Length==0)
+            {
+                Response.Write("<script>alert('请将内容填写完整哟');</script>");
+                return View();
+            }
+            
             data.DBCreate(strTitle, strContent);
-            //重導向到 Action
             return RedirectToAction("Index");
         }
     }
